@@ -2,40 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ROI_Staff_Contact.MainPage">
+    
+    <Grid>
+        <Image Aspect="AspectFill" Source="roi_background.png"/>
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <Grid RowDefinitions=".16*, .16*, .16*,.16*,.16*,.16*" 
+              ColumnDefinitions=".20*, .20*, Auto, .20*, .20*">
+            <Image AnchorY="0" Scale="0.7" Grid.ColumnSpan="5" Grid.Row="0"
+               Source="roi_logo.png"/>
+            <Button Grid.Column="2" Grid.Row="1" VerticalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="Staff Listing"/>
+            <ImageButton Scale="1" HorizontalOptions="Start" VerticalOptions="Center" CornerRadius="100" Grid.Column="1" Grid.Row="6" Source="add_button.png"/>
+            <ImageButton Scale="0.5" HorizontalOptions="Start" VerticalOptions="Center" CornerRadius="100" Grid.Column="2" Grid.Row="6" Source="info_icon.png"/>
+            <ImageButton Scale="1" HorizontalOptions="Start" VerticalOptions="Center" CornerRadius="100" Grid.Column="3" Grid.Row="6" Source="delete_icon.png"/>
+        </Grid>
+    </Grid>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
 
 </ContentPage>
