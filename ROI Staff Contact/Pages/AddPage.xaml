@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ROI_Staff_Contact.Pages.AddPage"
+             Title="AddPage">
+    <Grid>
+        <Image Aspect="AspectFill" Source="roi_background.png"/>
+        <StackLayout Margin="20">
+            <Grid>
+                <Image MaximumWidthRequest="150" HorizontalOptions="Center" Source="roi_logo.png"/>
+                <ImageButton x:Name="ListButton" MaximumHeightRequest="55" MaximumWidthRequest="55" HorizontalOptions="End" CornerRadius="100" Source="list_icon.png" Clicked="ListButton_Clicked" />
+                
+            </Grid>
+            <Grid>
+                <Button HorizontalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="Add New Profile"/>
+                <Label Text="Back To List" FontSize="11" FontAttributes="Bold" Background="LightGray" HorizontalOptions="End" VerticalOptions="Start"/>
+            </Grid>
+            <StackLayout Spacing="10">
+                    <Entry x:Name="StaffID" Placeholder="ID Number" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
+                    <Entry x:Name="Name" Placeholder="Full Name" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
+                    <Entry x:Name="Phone" Placeholder="Phone Number" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
+                    <Entry x:Name="DepID" Placeholder="Department ID" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
+                    <Entry x:Name="Street" Placeholder="Address: Street" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
+                    <Entry x:Name="City" Placeholder="Address: City" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
+                    <Entry x:Name="State" Placeholder="Address: State" BackgroundColor="White" PlaceholderColor="DarkGrey" />
+                    <Entry x:Name="Zip" Placeholder="Address: ZIP" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
+                    <Entry x:Name="Country" Placeholder="Address: Country" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
+                <ImageButton x:Name="AddStaffButton" MaximumWidthRequest="55" HorizontalOptions="Center" CornerRadius="100" Source="add_button.png" Clicked="AddStaff_Clicked"/>
+                <Label HorizontalOptions="Center" Text="Add New Staff Member" FontAttributes="Bold" BackgroundColor="LightGrey"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </Grid>
+</ContentPage>

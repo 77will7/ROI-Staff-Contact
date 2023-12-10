@@ -5,17 +5,38 @@
     
     <Grid>
         <Image Aspect="AspectFill" Source="roi_background.png"/>
+        <StackLayout Margin="20">
+            <Image MaximumWidthRequest="150" HorizontalOptions="Center" Source="roi_logo.png"/>
+            <Button HorizontalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="Staff Listing"/>
+            <Frame HeightRequest="500" BackgroundColor="Black">
+                <ListView x:Name="StaffListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="10">
+                                    <StackLayout Padding="5">
+                                        <Label Text="{Binding FullName}" VerticalOptions="CenterAndExpand" TextColor="White" />
+                                        <Label Text="1st Person" VerticalOptions="CenterAndExpand" TextColor="White"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
+            <Grid>
+                <ImageButton x:Name="AddStaffButton" MaximumWidthRequest="55" HorizontalOptions="Start" CornerRadius="100" Source="add_button.png" Clicked="AddStaffButton_Clicked"/>
+                <ImageButton x:Name="EditStaffButton" MaximumWidthRequest="55" HorizontalOptions="Center" CornerRadius="200"  Source="info_icon.png" Clicked="EditStaffButton_Clicked" />
+                <ImageButton x:Name="DeleteStaffButton" MaximumWidthRequest="55" HorizontalOptions="End" CornerRadius="200"  Source="delete_icon.png" Clicked="DeleteStaffButton_Clicked"/>
+            </Grid>
+            <Grid>
+                <Label HorizontalOptions="Start" Text="Add Staff" FontAttributes="Bold" BackgroundColor="LightGrey"/>
+                <Label HorizontalOptions="Center" Text="Edit Staff" FontAttributes="Bold" BackgroundColor="LightGrey"/>
+                <Label HorizontalOptions="End" VerticalOptions="End" Text="Delete Staff" FontAttributes="Bold" BackgroundColor="LightGrey"/>
+            </Grid>
 
-        <Grid RowDefinitions=".16*, .16*, .16*,.16*,.16*,.16*" 
-              ColumnDefinitions=".20*, .20*, Auto, .20*, .20*">
-            <Image AnchorY="0" Scale="0.7" Grid.ColumnSpan="5" Grid.Row="0"
-               Source="roi_logo.png"/>
-            <Button Grid.Column="2" Grid.Row="1" VerticalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="Staff Listing"/>
-            <ImageButton Scale="1" HorizontalOptions="Start" VerticalOptions="Center" CornerRadius="100" Grid.Column="1" Grid.Row="6" Source="add_button.png"/>
-            <ImageButton Scale="0.5" HorizontalOptions="Start" VerticalOptions="Center" CornerRadius="100" Grid.Column="2" Grid.Row="6" Source="info_icon.png"/>
-            <ImageButton Scale="1" HorizontalOptions="Start" VerticalOptions="Center" CornerRadius="100" Grid.Column="3" Grid.Row="6" Source="delete_icon.png"/>
-        </Grid>
+        </StackLayout>
     </Grid>
-
+    
 
 </ContentPage>

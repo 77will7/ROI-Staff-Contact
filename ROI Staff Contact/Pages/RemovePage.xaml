@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ROI_Staff_Contact.Pages.RemovePage"
+             Title="RemovePage">
+    <Grid>
+        <Image Aspect="AspectFill" Source="roi_background.png"/>
+        <StackLayout Margin="20">
+            <Grid>
+                <Image MaximumWidthRequest="150" HorizontalOptions="Center" Source="roi_logo.png"/>
+                <ImageButton x:Name="ListButton" MaximumHeightRequest="55" MaximumWidthRequest="55" HorizontalOptions="End" CornerRadius="100" Source="list_icon.png" Clicked="ListButton_Clicked" />
+
+            </Grid>
+            <Grid>
+                <Button HorizontalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="Remove Staff"/>
+                <Label Text="Back To List" FontSize="11" FontAttributes="Bold" Background="LightGray" HorizontalOptions="End" VerticalOptions="Start"/>
+            </Grid>
+            <Frame HeightRequest="500" BackgroundColor="Black">
+                <ListView>
+                    
+                </ListView>
+            </Frame>
+            <StackLayout Spacing="10">
+                <ImageButton x:Name="AddStaffButton" MaximumWidthRequest="55" HorizontalOptions="Center" CornerRadius="100" Source="delete_icon.png"/>
+                <Label HorizontalOptions="Center" Text="Remove Staff Member" FontAttributes="Bold" BackgroundColor="LightGrey"/>
+            </StackLayout>
+
+        </StackLayout>
+    </Grid>
+</ContentPage>

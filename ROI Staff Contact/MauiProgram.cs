@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
+
 namespace ROI_Staff_Contact
 {
     public static class MauiProgram
@@ -15,8 +16,8 @@ namespace ROI_Staff_Contact
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-#if DEBUG
-    		builder.Logging.AddDebug();
+#if DEBUG            
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
