@@ -16,8 +16,7 @@
                 <Label Text="Back To List" FontSize="11" FontAttributes="Bold" Background="LightGray" HorizontalOptions="End" VerticalOptions="Start"/>
             </Grid>
             <StackLayout Spacing="10">
-                    <Entry x:Name="StaffID" Placeholder="ID Number" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
-                    <Entry x:Name="Name" Placeholder="Full Name" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
+                <Entry x:Name="Name" Placeholder="Full Name" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
                     <Entry x:Name="Phone" Placeholder="Phone Number" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
                     <Entry x:Name="DepID" Placeholder="Department ID" BackgroundColor="White" PlaceholderColor="DarkGrey"/>
                     <Entry x:Name="Street" Placeholder="Address: Street" BackgroundColor="White" PlaceholderColor="DarkGrey"/>

@@ -12,16 +12,26 @@
 
             </Grid>
             <Grid>
-                <Button HorizontalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="Remove Staff"/>
+                <Button x:Name="Title" HorizontalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="Remove Staff"/>
                 <Label Text="Back To List" FontSize="11" FontAttributes="Bold" Background="LightGray" HorizontalOptions="End" VerticalOptions="Start"/>
             </Grid>
             <Frame HeightRequest="500" BackgroundColor="Black">
-                <ListView>
-                    
+                <ListView x:Name="StaffListView" HorizontalOptions="Fill">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout>
+                                        <Button x:Name="StaffButton" Text="{Binding FullName}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="Black" BackgroundColor="LightGray" Clicked="StaffButton_Clicked"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
             </Frame>
             <StackLayout Spacing="10">
-                <ImageButton x:Name="AddStaffButton" MaximumWidthRequest="55" HorizontalOptions="Center" CornerRadius="100" Source="delete_icon.png"/>
+                <ImageButton x:Name="DeleteStaffButton" MaximumWidthRequest="55" HorizontalOptions="Center" CornerRadius="100" Source="delete_icon.png" Clicked="DeleteStaffButton_Clicked"/>
                 <Label HorizontalOptions="Center" Text="Remove Staff Member" FontAttributes="Bold" BackgroundColor="LightGrey"/>
             </StackLayout>
 

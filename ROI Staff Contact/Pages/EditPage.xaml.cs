@@ -32,7 +32,7 @@ public partial class EditPage : ContentPage
 
     private void ListButton_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushModalAsync(new MainPage());
+        Navigation.PopModalAsync();
     }
 
     private async void EditStaffButton_Clicked(object sender, EventArgs e)

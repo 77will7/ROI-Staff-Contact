@@ -7,6 +7,7 @@ namespace ROI_Staff_Contact
     {
 
         private DatabaseService _databaseService;
+        private Staff _selectedStaff;
 
         private List<Staff> _staff;
 
@@ -15,6 +16,7 @@ namespace ROI_Staff_Contact
             InitializeComponent();
 
             _databaseService = new DatabaseService();
+
         }
 
         protected override void OnAppearing()
@@ -22,6 +24,10 @@ namespace ROI_Staff_Contact
             base.OnAppearing();
 
             LoadStaffAsync();
+        }
+        private void StaffButton_Clicked(object sender, EventArgs e)
+        {
+            _selectedStaff = (Staff)((Button)sender).BindingContext;
         }
 
         private void AddStaffButton_Clicked(object sender, EventArgs e)
@@ -31,13 +37,12 @@ namespace ROI_Staff_Contact
 
         private void EditStaffButton_Clicked(object sender, EventArgs e)
         {
-            var selectedStaff = (Staff)((Button)sender).BindingContext;
-            Navigation.PushModalAsync(new EditPage(selectedStaff,_databaseService));
+            Navigation.PushModalAsync(new EditPage(_selectedStaff,_databaseService));
         }
 
         private void DeleteStaffButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new RemovePage());
+            Navigation.PushModalAsync(new RemovePage(_databaseService));
         }
 
         public async void LoadStaffAsync()
@@ -53,6 +58,7 @@ namespace ROI_Staff_Contact
             }
         }
 
+        
     }
 
 }

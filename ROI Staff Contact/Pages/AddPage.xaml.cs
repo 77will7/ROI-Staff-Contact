@@ -13,13 +13,13 @@ public partial class AddPage : ContentPage
 
     private void ListButton_Clicked(object sender, EventArgs e)
     {
-		Navigation.PushModalAsync(new MainPage());
+        Navigation.PopModalAsync();
     }
     private async void AddStaff_Clicked(object sender, EventArgs e)
     {
         var newStaff = new Staff
         {
-            ID = Int32.Parse(StaffID.Text),
+            
             FullName = Name.Text,
             Phone = Phone.Text,
             Department = Int32.Parse(DepID.Text),
@@ -32,6 +32,6 @@ public partial class AddPage : ContentPage
 
         await _databaseService.AddStaffAsync(newStaff);
 
-        StaffID.Text = Name.Text = Phone.Text = DepID.Text = Street.Text= City.Text = State.Text = Zip.Text = Country.Text= string.Empty;
+        Name.Text = Phone.Text = DepID.Text = Street.Text= City.Text = State.Text = Zip.Text = Country.Text= string.Empty;
     }
 }

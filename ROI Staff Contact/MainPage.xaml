@@ -9,14 +9,13 @@
             <Image MaximumWidthRequest="150" HorizontalOptions="Center" Source="roi_logo.png"/>
             <Button HorizontalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="Staff Listing"/>
             <Frame HeightRequest="500" BackgroundColor="Black">
-                <ListView x:Name="StaffListView">
+                <ListView x:Name="StaffListView" HorizontalOptions="Fill">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Orientation="Horizontal" Padding="10">
-                                    <StackLayout Padding="5">
-                                        <Label Text="{Binding FullName}" VerticalOptions="CenterAndExpand" TextColor="White" />
-                                        <Label Text="1st Person" VerticalOptions="CenterAndExpand" TextColor="White"/>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout>
+                                        <Button x:Name="StaffButton" Text="{Binding FullName}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="Black" BackgroundColor="LightGray" Clicked="StaffButton_Clicked"/>
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell>
