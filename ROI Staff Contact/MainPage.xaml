@@ -4,7 +4,7 @@
              x:Class="ROI_Staff_Contact.MainPage">
     
     <Grid>
-        <Image Aspect="AspectFill" Source="roi_background.png"/>
+        <Image x:Name="MainBackImg" Aspect="AspectFill" Source="roi_gray_background.png"/>
         <StackLayout Margin="20">
             <Image MaximumWidthRequest="150" HorizontalOptions="Center" Source="roi_logo.png"/>
             <Button HorizontalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="Staff Listing"/>

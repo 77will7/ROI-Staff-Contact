@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ROI_Staff_Contact.UserSettingsPage"
+             Title="UserSettingsPage"
+             >
+    <Grid>
+        <Image x:Name="MainBackImg" Aspect="AspectFill" Source="roi_gray_background.png"/>
+        <StackLayout >
+            <Image MaximumWidthRequest="150" HorizontalOptions="Center" Source="roi_logo.png"/>
+            <Button x:Name="SettingsButton" HorizontalOptions="Center" BackgroundColor="LightGrey" TextColor="Black" FontSize="15" FontAttributes="Bold" Text="User Settings"/>
+            <VerticalStackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Entry Placeholder="Enter Your Name" PlaceholderColor="DarkGray"  Grid.Column="0" x:Name="NameEntry" BackgroundColor="LightGray"></Entry>
+
+                    <Button x:Name="ChangeThemeText" Text="Change Theme" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" Grid.Row="1" BackgroundColor="LightGrey" TextColor="Black"></Button>
+                    <Switch x:Name="togTheme" Grid.Row="2" Toggled="OnThemeSwitchToggled" BackgroundColor="DimGray" />
+                    
+                    
+                    <Button x:Name="ChangeBackText" Text="Change Background" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" Grid.Row="3" BackgroundColor="LightGrey" TextColor="Black"></Button>
+                    <Switch x:Name="togBackground" Grid.Row="4" Toggled="togBackground_Toggled" BackgroundColor="DimGray" />
+                    
+                    <Entry Placeholder="Enter Your Age" PlaceholderColor="DarkGray" Grid.Column="1" x:Name="AgeEntry" BackgroundColor="LightGray" ></Entry>
+                    
+                    
+                    <Button x:Name="ChangeFontText" Text="Change Font Size" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" Grid.Row="5" BackgroundColor="LightGrey" TextColor="Black"></Button>
+                    <Slider x:Name="FontSlider" VerticalOptions="Start" MinimumTrackColor="Black" ThumbColor="Black" Grid.Row="6" ValueChanged="Slider_ValueChanged" Minimum="0" Maximum="50" />
+                    <Button x:Name="FontSize" Text="Font Size:" VerticalOptions="Start" HorizontalOptions="Center" FontAttributes="Bold" Grid.Row="7" BackgroundColor="LightGrey" TextColor="Black"></Button>
+
+
+                    <Button  BackgroundColor="Green" Grid.Row="8" Grid.Column="1" Clicked="SaveButton_Clicked" Text="SAVE USER SETTINGS" ></Button>
+                </Grid>
+            </VerticalStackLayout>
+        </StackLayout>
+        
+    </Grid>
+</ContentPage>

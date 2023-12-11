@@ -4,7 +4,7 @@
              x:Class="ROI_Staff_Contact.Pages.EditPage"
              Title="EditPage">
     <Grid>
-        <Image Aspect="AspectFill" Source="roi_background.png"/>
+        <Image Aspect="AspectFill" Source="roi_gray_background.png"/>
         <StackLayout Margin="20">
             <Grid>
                 <Image MaximumWidthRequest="150" HorizontalOptions="Center" Source="roi_logo.png"/>
