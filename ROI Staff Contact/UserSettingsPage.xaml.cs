@@ -79,8 +79,6 @@ public partial class UserSettingsPage : ContentPage
         await DisplayAlert("Success", "User settings saved", "OK");
     }
 
-    //PREFERENCES
-    //SWITCH: https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch
     private void OnThemeSwitchToggled(object sender, ToggledEventArgs e)
     {
         bool isDarkTheme = e.Value;
